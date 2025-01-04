@@ -1,3 +1,4 @@
+//This is the practice site 
 console.log("I am JS ");
 fullName = 'Reeba Yaseen';
 age = '45';
