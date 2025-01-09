@@ -19,3 +19,18 @@ function mycode(a,b){
     return s;
 }
 console.log (mycode(4,4));
+
+function sumEvenNumbers(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 2 === 0) {
+            sum += arr[i];
+        }
+    }
+    return sum;
+}
+
+// Example usage:
+const numbers = [1, 2, 3, 4, 5, 6];
+console.log(sumEvenNumbers(numbers)); // Output: 12
+
