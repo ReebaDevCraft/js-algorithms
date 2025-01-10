@@ -43,6 +43,19 @@ function calculateCGPA(gpas) {
         return sum + gpa;
     }, 0);
 
+    const cgpa = totalGPA / gpas.length;
+
+    return cgpa.toFixed(2); // Return CGPA rounded to 2 decimal places
+}
+
+// Example usage
+try {
+    const semesterGPAs = [3.0, 3.5, 3.7, 3.8]; // Replace with your GPAs
+    console.log("Your CGPA is: " + calculateCGPA(semesterGPAs));
+} catch (error) {
+    console.error(error.message);
+}
+
 // Example usage:
 const numbers = [1, 2, 3, 4, 5, 6];
 console.log(sumEvenNumbers(numbers)); // Output: 12
