@@ -60,3 +60,21 @@ try {
 const numbers = [1, 2, 3, 4, 5, 6];
 console.log(sumEvenNumbers(numbers)); // Output: 12
 
+function validateForm() {
+    const formFields = document.querySelectorAll("input[required], textarea[required]");
+    let isValid = true;
+
+    formFields.forEach(field => {
+        if (!field.value.trim()) {
+            isValid = false;
+            field.style.border = "2px solid red";
+        } else {
+            field.style.border = "1px solid #ccc";
+        }
+    });
+
+    if (!isValid) {
+        alert("Please fill all the required fields.");
+    }
+    return isValid;
+}
