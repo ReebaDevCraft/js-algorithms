@@ -87,3 +87,5 @@ function smoothScroll(targetId) {
     }
 }
 
+<button onclick="smoothScroll('section1')">Go to Section 1</button>
+<div id="section1">This is Section 1</div>
