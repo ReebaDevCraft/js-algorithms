@@ -78,3 +78,12 @@ function validateForm() {
     }
     return isValid;
 }
+function smoothScroll(targetId) {
+    const target = document.getElementById(targetId);
+    if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+    } else {
+        console.error("Target section not found!");
+    }
+}
+
