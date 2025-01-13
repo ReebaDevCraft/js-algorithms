@@ -30,12 +30,10 @@ function sumEvenNumbers(arr) {
     return sum;
 }
 function calculateCGPA(gpas) {
-    // Check if the input is a valid array
     if (!Array.isArray(gpas) || gpas.length === 0) {
         return "Invalid input: Please provide an array of GPAs.";
     }
 
-    // Sum the GPAs and calculate the CGPA
     const totalGPA = gpas.reduce((sum, gpa) => {
         if (typeof gpa !== "number" || gpa < 0 || gpa > 4) {
             throw new Error("Each GPA must be a number between 0 and 4.");
@@ -45,20 +43,18 @@ function calculateCGPA(gpas) {
 
     const cgpa = totalGPA / gpas.length;
 
-    return cgpa.toFixed(2); // Return CGPA rounded to 2 decimal places
+    return cgpa.toFixed(2);
 }
 
-// Example usage
 try {
-    const semesterGPAs = [3.0, 3.5, 3.7, 3.8]; // Replace with your GPAs
+    const semesterGPAs = [3.0, 3.5, 3.7, 3.8]; 
     console.log("Your CGPA is: " + calculateCGPA(semesterGPAs));
 } catch (error) {
     console.error(error.message);
 }
 
-// Example usage:
 const numbers = [1, 2, 3, 4, 5, 6];
-console.log(sumEvenNumbers(numbers)); // Output: 12
+console.log(sumEvenNumbers(numbers)); 
 
 function validateForm() {
     const formFields = document.querySelectorAll("input[required], textarea[required]");
