@@ -1,0 +1,35 @@
+const numbers = [10, 20, 30, 40, 50];
+const [first, second, ...rest] = numbers;
+
+console.log(`First: ${first}`); // 10
+console.log(`Second: ${second}`); // 20
+console.log(`Rest:`, rest); // [30, 40, 50]
+
+// Object Destructuring Example
+const person = {
+  name: "Alex",
+  age: 22,
+  skills: ["HTML", "CSS", "JavaScript"],
+};
+
+const { name, age, skills } = person;
+
+console.log(`Name: ${name}`); // Alex
+console.log(`Age: ${age}`); // 22
+console.log(`Skills:`, skills); // ["HTML", "CSS", "JavaScript"]
+
+// Nested Object Destructuring
+const user = {
+  id: 101,
+  profile: {
+    username: "alex_dev",
+    email: "alex@example.com",
+  },
+};
+
+const {
+  profile: { username, email },
+} = user;
+
+console.log(`Username: ${username}`); // alex_dev
+console.log(`Email: ${email}`); // alex@example.com
